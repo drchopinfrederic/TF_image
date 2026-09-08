@@ -1,0 +1,47 @@
+{
+  "verified_utc": "2026-09-08T14:44:29.978802+00:00",
+  "archive": "toss-front15-20260908-partitions.zip",
+  "archive_bytes": 1085340895,
+  "archive_sha256": "843c92cf81afbab3afeb8173997f7c55558846682832e1ca1ceee4e43a8c4563",
+  "uncompressed_image_bytes": 2278555648,
+  "source_backup": "toss-front15-20260908T115659Z",
+  "source_image_sha256": "4a005193c762c411e244e3068470036764057fae424d84d4e26d72ee82993c22",
+  "source_images_match_backup_hashes": true,
+  "archive_images_match_backup_hashes": true,
+  "archive_documents_match": true,
+  "archive_crc_passed": true,
+  "partitions": [
+    {
+      "file": "dtbo.img",
+      "bytes": 4194304,
+      "start_lba": 40960,
+      "sectors": 8192,
+      "sha256": "09b270cae2b58f6ae70663f9e4b8ca480c8297e3244c8c80d8498b1dde83fa67",
+      "compressed_bytes": 4409
+    },
+    {
+      "file": "recovery.img",
+      "bytes": 125829120,
+      "start_lba": 133120,
+      "sectors": 245760,
+      "sha256": "3b13305e937b4a6584bb6cc459e49ac0c1f74bc4f78915a5cf45e3c3e73f9ecf",
+      "compressed_bytes": 53125663
+    },
+    {
+      "file": "baseparameter.img",
+      "bytes": 1048576,
+      "start_lba": 1984512,
+      "sectors": 2048,
+      "sha256": "372156f6fe5637fe144c453e88e4a54e70d471fd8284bd0735536f519d917e2a",
+      "compressed_bytes": 3474
+    },
+    {
+      "file": "super.img",
+      "bytes": 2147483648,
+      "start_lba": 1986560,
+      "sectors": 4194304,
+      "sha256": "37f867aa86495b074f096c93f67e52d6a7851c22f94886308c7edbf53f928126",
+      "compressed_bytes": 1032204578
+    }
+  ]
+}

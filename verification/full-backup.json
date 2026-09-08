@@ -1,0 +1,19 @@
+{
+  "verified_utc": "2026-09-08T14:52:58.590416+00:00",
+  "archive": "toss-front15-20260908-emmc-user.zip",
+  "archive_bytes": 1865526512,
+  "archive_sha256": "208e2c6fb3485b442c1ed50322b45278662430a92c786c3facb1e995d23102ea",
+  "image_bytes": 15636365312,
+  "image_sha256": "4a005193c762c411e244e3068470036764057fae424d84d4e26d72ee82993c22",
+  "source_image_matches_verified_backup": true,
+  "archive_image_matches_verified_backup": true,
+  "archive_crc_passed": true,
+  "archive_documents_match": true,
+  "scope": "Complete original eMMC user area; includes userdata and security",
+  "excluded_areas": [
+    "eMMC boot0",
+    "eMMC boot1",
+    "eMMC RPMB"
+  ],
+  "same_device_restore_test_passed": true
+}

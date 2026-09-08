@@ -1,0 +1,6 @@
+# Images and archives are distributed as release assets.
+*.img
+*.zip
+*.7z
+*.gz
+*.partial

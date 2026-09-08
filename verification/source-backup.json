@@ -1,0 +1,25 @@
+{
+  "device_model": "Toss Front 1.5",
+  "soc": "Rockchip RK3399",
+  "backup_date": "2026-09-08",
+  "source_image": "emmc-user.img",
+  "source_bytes": 15636365312,
+  "source_sha256": "4a005193c762c411e244e3068470036764057fae424d84d4e26d72ee82993c22",
+  "scope": "Entire eMMC user area; separate boot0/boot1 and RPMB excluded",
+  "backup_checks": {
+    "gpt_primary_crc_ok": true,
+    "gpt_secondary_crc_ok": true,
+    "gpt_entry_arrays_match": true,
+    "matches_original_device_map": true,
+    "independent_readback_ranges": 11,
+    "partition_count": 14
+  },
+  "same_device_restore_test": {
+    "full_image_written": true,
+    "full_readback_bytes": 15636365312,
+    "full_readback_sha256": "4a005193c762c411e244e3068470036764057fae424d84d4e26d72ee82993c22",
+    "full_readback_matches": true,
+    "normal_boot_and_touch_confirmed_by_owner": true
+  },
+  "other_devices_compatibility_tested": false
+}
