@@ -18,6 +18,35 @@
 | `toss-front15-20260908-partitions.zip.sha256` | 압축 파일 자체의 SHA-256 |
 | `toss-front15-20260908-partitions-verification.json` | 압축 전후 이미지 해시·크기·ZIP CRC 검증 결과 |
 
+### ZIP 내부 구조
+
+**전체 복원용 ZIP** — eMMC 사용자 영역 전체가 `emmc-user.img` 한 파일에 들어 있습니다.
+
+```text
+toss-front15-20260908-emmc-user.zip
+├── emmc-user.img     15,636,365,312바이트 — 전체 원본 이미지
+├── README.md         백업 범위·검증·복원 안내
+├── manifest.json     이미지 크기·SHA-256·백업 범위
+└── SHA256SUMS        emmc-user.img의 SHA-256
+```
+
+**4개 파티션 ZIP** — 요청한 파티션을 개별 `.img` 파일로 담은 세트입니다.
+
+```text
+toss-front15-20260908-partitions.zip
+├── dtbo.img               4,194,304바이트 (4MiB)
+├── recovery.img         125,829,120바이트 (120MiB)
+├── baseparameter.img      1,048,576바이트 (1MiB)
+├── super.img          2,147,483,648바이트 (2GiB)
+├── README.md          파티션 구성·검증 안내
+├── manifest.json      각 파티션의 크기·시작 LBA·SHA-256
+└── SHA256SUMS         4개 이미지 각각의 SHA-256
+```
+
+위 트리는 실제 ZIP 내부 파일 목록입니다. 다운로드 목록의 `.zip.sha256`과
+`-verification.json`은 **ZIP 밖에서 따로 받는 파일**이며, 내부의 `SHA256SUMS`와
+`manifest.json`은 압축을 풀면 나옵니다.
+
 이 파티션 세트는 네 개의 원본 raw 이미지로 구성됩니다. `super.img`도 raw 형식이며
 Android sparse 이미지로 변환하지 않았습니다. `userdata`·`security` 등 나머지 파티션은
 이 세트에 포함하지 않습니다. 네 파일만으로 전체 기기를 복원하는 구성은 아닙니다.
@@ -42,6 +71,10 @@ ZIP을 사용한 이유는 GitHub Releases의 개별 첨부 파일이 2GiB 미�
 | `recovery.img` | 125,829,120 | 133120 | 245760 |
 | `baseparameter.img` | 1,048,576 | 1984512 | 2048 |
 | `super.img` | 2,147,483,648 | 1986560 | 4194304 |
+
+`super.img`의 크기는 **4,194,304섹터 × 512바이트 = 2,147,483,648바이트**입니다.
+정확히 **2GiB**이며, 십진수 GB로는 약 **2.15GB**입니다. 시작 LBA `1986560`은
+기기에서 이 파티션이 시작하는 섹터 번호입니다.
 
 ## 다운로드 검증
 
