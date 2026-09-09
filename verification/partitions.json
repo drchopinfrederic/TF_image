@@ -1,16 +1,55 @@
 {
-  "verified_utc": "2026-09-08T14:44:29.978802+00:00",
-  "archive": "toss-front15-20260908-partitions.zip",
-  "archive_bytes": 1085340895,
-  "archive_sha256": "843c92cf81afbab3afeb8173997f7c55558846682832e1ca1ceee4e43a8c4563",
-  "uncompressed_image_bytes": 2278555648,
+  "verified_utc": "2026-09-09T01:10:11.722681+00:00",
+  "archive": "toss-front15-20260908-partitions-no-userdata.zip",
+  "archive_bytes": 1103902578,
+  "archive_sha256": "6430ffb853c41ed6f1c8ca39bab4dfd58d175cb436c19fbe2d169d40aa10acdc",
+  "uncompressed_image_bytes": 3160408064,
   "source_backup": "toss-front15-20260908T115659Z",
   "source_image_sha256": "4a005193c762c411e244e3068470036764057fae424d84d4e26d72ee82993c22",
+  "partition_count": 13,
+  "excluded_partitions": [
+    "userdata"
+  ],
+  "includes_gpt_tables": false,
+  "includes_unpartitioned_loader_area": false,
+  "source_full_image_restore_test_passed": true,
   "source_images_match_backup_hashes": true,
   "archive_images_match_backup_hashes": true,
   "archive_documents_match": true,
   "archive_crc_passed": true,
   "partitions": [
+    {
+      "file": "security.img",
+      "bytes": 4194304,
+      "start_lba": 8192,
+      "sectors": 8192,
+      "sha256": "a8d2d5273e93dd63bc527de73e8495be982901a017a8d9fc3a62055ebc4c83de",
+      "compressed_bytes": 6207
+    },
+    {
+      "file": "uboot.img",
+      "bytes": 4194304,
+      "start_lba": 16384,
+      "sectors": 8192,
+      "sha256": "73002a889406dcb9876d1b978dbd76fcb9fd7cdf32a3b6810a06f4b9b1280555",
+      "compressed_bytes": 964053
+    },
+    {
+      "file": "trust.img",
+      "bytes": 4194304,
+      "start_lba": 24576,
+      "sectors": 8192,
+      "sha256": "1a4c99c548110cbe6c1708a47951e66c5834aa4fe55ad2145a55e375ad2312c8",
+      "compressed_bytes": 496049
+    },
+    {
+      "file": "misc.img",
+      "bytes": 4194304,
+      "start_lba": 32768,
+      "sectors": 8192,
+      "sha256": "8c7f283298440903b8684f5be6a4d22f728b98ef37d9bf64d8fc0461b50e7e06",
+      "compressed_bytes": 4419
+    },
     {
       "file": "dtbo.img",
       "bytes": 4194304,
@@ -20,12 +59,52 @@
       "compressed_bytes": 4409
     },
     {
+      "file": "vbmeta.img",
+      "bytes": 1048576,
+      "start_lba": 49152,
+      "sectors": 2048,
+      "sha256": "76ff77959f2451ee3838de5b2d90a0e21017345cac4f7ce56c9da7a630edc752",
+      "compressed_bytes": 1069
+    },
+    {
+      "file": "boot.img",
+      "bytes": 41943040,
+      "start_lba": 51200,
+      "sectors": 81920,
+      "sha256": "c22cb646fc0205132cbde1623c6e04ad8c19ef63703249ac28f13fc740d4f4ca",
+      "compressed_bytes": 16148889
+    },
+    {
       "file": "recovery.img",
       "bytes": 125829120,
       "start_lba": 133120,
       "sectors": 245760,
       "sha256": "3b13305e937b4a6584bb6cc459e49ac0c1f74bc4f78915a5cf45e3c3e73f9ecf",
       "compressed_bytes": 53125663
+    },
+    {
+      "file": "backup.img",
+      "bytes": 402653184,
+      "start_lba": 378880,
+      "sectors": 786432,
+      "sha256": "d0008fb017d0b8faced6cb157b88d576d192b5543d5e6b240ba031043e25efc7",
+      "compressed_bytes": 396806
+    },
+    {
+      "file": "cache.img",
+      "bytes": 402653184,
+      "start_lba": 1165312,
+      "sectors": 786432,
+      "sha256": "a179689e8f66a720ddb48cd95dd5da9abda1837be620051db5ce6719eacc8275",
+      "compressed_bytes": 516019
+    },
+    {
+      "file": "metadata.img",
+      "bytes": 16777216,
+      "start_lba": 1951744,
+      "sectors": 32768,
+      "sha256": "a9ea58a8ffc6421f29dee917571cb72a5d04f6453105473d35604cf9d06f5c60",
+      "compressed_bytes": 25909
     },
     {
       "file": "baseparameter.img",
